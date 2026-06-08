@@ -91,11 +91,16 @@ export default async function DashboardPage() {
   { name: "Low", value: allTasks.filter((t: { priority: string }) => t.priority === "LOW").length, color: priorityColors.LOW }
 ];
 
+  // const statusData = [
+  //   { name: "Todo", value: allTasks.filter(t => t.status === "TODO").length, color: statusColors.TODO },
+  //   { name: "In Progress", value: allTasks.filter(t => t.status === "IN_PROGRESS").length, color: statusColors.IN_PROGRESS },
+  //   { name: "Completed", value: allTasks.filter(t => t.status === "COMPLETED").length, color: statusColors.COMPLETED },
+  // ];
   const statusData = [
-    { name: "Todo", value: allTasks.filter(t => t.status === "TODO").length, color: statusColors.TODO },
-    { name: "In Progress", value: allTasks.filter(t => t.status === "IN_PROGRESS").length, color: statusColors.IN_PROGRESS },
-    { name: "Completed", value: allTasks.filter(t => t.status === "COMPLETED").length, color: statusColors.COMPLETED },
-  ];
+  { name: "Todo", value: allTasks.filter((t: { status: string }) => t.status === "TODO").length, color: statusColors.TODO },
+  { name: "In Progress", value: allTasks.filter((t: { status: string }) => t.status === "IN_PROGRESS").length, color: statusColors.IN_PROGRESS },
+  { name: "Completed", value: allTasks.filter((t: { status: string }) => t.status === "COMPLETED").length, color: statusColors.COMPLETED }
+];
 
   const projectProgressData = projects.map(p => ({
     name: p.name,
