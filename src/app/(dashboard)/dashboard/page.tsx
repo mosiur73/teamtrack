@@ -79,16 +79,19 @@ export default async function DashboardPage() {
 
   const pendingTasks = totalTasks - completedTasks;
 
+   type TaskItem = { priority: string; status: string };
+  const taskList = allTasks as TaskItem[];
+
   const priorityData = [
-    { name: "High", value: allTasks.filter(t => t.priority === "HIGH").length, color: priorityColors.HIGH },
-    { name: "Medium", value: allTasks.filter(t => t.priority === "MEDIUM").length, color: priorityColors.MEDIUM },
-    { name: "Low", value: allTasks.filter(t => t.priority === "LOW").length, color: priorityColors.LOW },
+    { name: "High", value: taskList.filter(t => t.priority === "HIGH").length, color: priorityColors.HIGH },
+    { name: "Medium", value: taskList.filter(t => t.priority === "MEDIUM").length, color: priorityColors.MEDIUM },
+    { name: "Low", value: taskList.filter(t => t.priority === "LOW").length, color: priorityColors.LOW },
   ];
 
-   const statusData = [
-    { name: "Todo", value: allTasks.filter(t => t.status === "TODO").length, color: statusColors.TODO },
-    { name: "In Progress", value: allTasks.filter(t => t.status === "IN_PROGRESS").length, color: statusColors.IN_PROGRESS },
-    { name: "Completed", value: allTasks.filter(t => t.status === "COMPLETED").length, color: statusColors.COMPLETED },
+  const statusData = [
+    { name: "Todo", value: taskList.filter(t => t.status === "TODO").length, color: statusColors.TODO },
+    { name: "In Progress", value: taskList.filter(t => t.status === "IN_PROGRESS").length, color: statusColors.IN_PROGRESS },
+    { name: "Completed", value: taskList.filter(t => t.status === "COMPLETED").length, color: statusColors.COMPLETED },
   ];
 
   const projectProgressData = projects.map(p => ({
