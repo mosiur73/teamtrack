@@ -1,4 +1,4 @@
-# MolyLearn — Smart Project & Task Collaboration System
+# TeamTrack — Smart Project & Task Collaboration System
 
 A full-stack project and task management web application built with Next.js 16, featuring role-based access control, real-time notifications, analytics dashboards, and team collaboration tools.
 
@@ -104,7 +104,7 @@ A full-stack project and task management web application built with Next.js 16, 
 
 ```bash
 git clone <repo-url>
-cd molylearn
+cd TeamTrack
 ```
 
 ### 2. Install dependencies
@@ -124,7 +124,7 @@ cp .env.example .env
 Edit `.env`:
 
 ```env
-DATABASE_URL="postgresql://postgres:<your-password>@localhost:5432/molylearn"
+DATABASE_URL="postgresql://postgres:<your-password>@localhost:5432/TeamTrack"
 NEXTAUTH_SECRET="your-random-secret-string"
 NEXTAUTH_URL="http://localhost:3000"
 ```

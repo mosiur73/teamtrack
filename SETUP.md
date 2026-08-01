@@ -1,4 +1,4 @@
-# নতুন Laptop এ MolyLearn চালানোর Guide
+# নতুন Laptop এ TeamTrack চালানোর Guide
 
 ---
 
@@ -25,22 +25,22 @@
 ## Step 2 — Project Setup করো
 
 ### 2.1 ZIP extract করো
-Google Drive থেকে `molylearn.zip` download করে extract করো।
+Google Drive থেকে `TeamTrack.zip` download করে extract করো।
 
 ### 2.2 Database তৈরি করো
-PostgreSQL এ `molylearn` নামে একটা database তৈরি করতে হবে।
+PostgreSQL এ `TeamTrack` নামে একটা database তৈরি করতে হবে।
 
 **pgAdmin দিয়ে (GUI):**
 1. pgAdmin খোলো
 2. বাম দিকে `Databases` এ right-click করো
 3. `Create → Database` এ click করো
-4. Name দাও: `molylearn`
+4. Name দাও: `TeamTrack`
 5. Save করো
 
 **অথবা terminal দিয়ে:**
 ```bash
 psql -U postgres
-CREATE DATABASE molylearn;
+CREATE DATABASE TeamTrack;
 \q
 ```
 
@@ -52,7 +52,7 @@ Project folder এর ভেতরে `.env` নামে একটা file ত�
 
 ```env
 DATABASE_URL="postgresql://postgres:YOUR_PASSWORD@localhost:5432/TeamTrack"
-NEXTAUTH_SECRET="supersecretkey123456789molylearn2025"
+NEXTAUTH_SECRET="supersecretkey123456789TeamTrack2025"
 NEXTAUTH_URL="http://localhost:3000"
 ```
 

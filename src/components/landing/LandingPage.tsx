@@ -104,7 +104,7 @@ export function LandingPage() {
             <div className="w-8 h-8 bg-violet-600 rounded-lg flex items-center justify-center">
               <FolderKanban className="w-4 h-4 text-white" />
             </div>
-            <span className="text-lg font-bold">MolyLearn</span>
+            <span className="text-lg font-bold">TeamTrack</span>
           </div>
           <div className="flex items-center gap-3">
             <Link href="/login" className="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
@@ -131,7 +131,7 @@ export function LandingPage() {
             <br />collaborate as a team.
           </h1>
           <p className="anim-fade-up text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed" style={{ animationDelay: "160ms" }}>
-            MolyLearn brings your team together — assign tasks, monitor progress,
+            TeamTrack brings your team together — assign tasks, monitor progress,
             get analytics, and never miss a deadline.
           </p>
           <div className="anim-fade-up flex items-center justify-center gap-4 flex-wrap" style={{ animationDelay: "240ms" }}>
@@ -338,9 +338,9 @@ export function LandingPage() {
             <div className="w-6 h-6 bg-violet-600 rounded-md flex items-center justify-center">
               <FolderKanban className="w-3.5 h-3.5 text-white" />
             </div>
-            <span className="font-semibold text-sm">MolyLearn</span>
+            <span className="font-semibold text-sm">TeamTrack</span>
           </div>
-          <p className="text-xs text-gray-400 dark:text-gray-500">© 2025 MolyLearn. All rights reserved.</p>
+          <p className="text-xs text-gray-400 dark:text-gray-500">© 2025 TeamTrack. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <Link href="/login" className="text-xs text-gray-400 hover:text-violet-600 transition-colors">Sign in</Link>
             <Link href="/signup" className="text-xs text-gray-400 hover:text-violet-600 transition-colors">Sign up</Link>

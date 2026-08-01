@@ -1,6 +1,6 @@
-# Deployment Guide — MolyLearn
+# Deployment Guide — TeamTrack
 
-Step-by-step guide to deploy MolyLearn to **Vercel** with **Supabase** as the production PostgreSQL database.
+Step-by-step guide to deploy TeamTrack to **Vercel** with **Supabase** as the production PostgreSQL database.
 
 ---
 
@@ -18,7 +18,7 @@ Step-by-step guide to deploy MolyLearn to **Vercel** with **Supabase** as the pr
 
 ### 1.1 Create a new GitHub repository
 1. Go to [github.com](https://github.com) → **New repository**
-2. Name it `molylearn` (or any name you prefer)
+2. Name it `TeamTrack` (or any name you prefer)
 3. Set to **Private** or **Public**
 4. Do **NOT** initialize with README (we already have one)
 5. Click **Create repository**
@@ -29,9 +29,9 @@ Open terminal in the project folder and run:
 
 ```bash
 git add .
-git commit -m "Initial commit: MolyLearn project"
+git commit -m "Initial commit: TeamTrack project"
 git branch -M main
-git remote add origin https://github.com/<your-username>/molylearn.git
+git remote add origin https://github.com/<your-username>/TeamTrack.git
 git push -u origin main
 ```
 
@@ -45,7 +45,7 @@ git push -u origin main
 3. Click **New Project**
 4. Fill in:
    - **Organization:** your org (or create one)
-   - **Project name:** `molylearn`
+   - **Project name:** `TeamTrack`
    - **Database Password:** create a strong password (save it!)
    - **Region:** choose the closest to your users
 5. Click **Create new project** and wait ~2 minutes
@@ -85,7 +85,7 @@ DATABASE_URL="postgresql://postgres:<your-password>@db.xxxx.supabase.co:5432/pos
 
 ### 3.2 Import the project
 1. Click **Add New** → **Project**
-2. Find your `molylearn` repository and click **Import**
+2. Find your `TeamTrack` repository and click **Import**
 3. Vercel will auto-detect it as a Next.js project
 
 ### 3.3 Configure environment variables
@@ -96,7 +96,7 @@ Before clicking **Deploy**, scroll down to **Environment Variables** and add the
 |---|---|
 | `DATABASE_URL` | Your Supabase connection string from Step 2.2 |
 | `NEXTAUTH_SECRET` | A random 32+ character string (see below) |
-| `NEXTAUTH_URL` | Your Vercel app URL (e.g. `https://molylearn.vercel.app`) |
+| `NEXTAUTH_URL` | Your Vercel app URL (e.g. `https://TeamTrack.vercel.app`) |
 
 **Generate NEXTAUTH_SECRET:**
 
@@ -113,7 +113,7 @@ Or use any random string generator (min 32 characters).
 ### 3.4 Deploy
 1. Click **Deploy**
 2. Wait 2-3 minutes for the build to complete
-3. Vercel will give you a live URL like `https://molylearn.vercel.app`
+3. Vercel will give you a live URL like `https://TeamTrack.vercel.app`
 
 ### 3.5 Update NEXTAUTH_URL
 1. Go to your Vercel project → **Settings** → **Environment Variables**
@@ -124,7 +124,7 @@ Or use any random string generator (min 32 characters).
 
 ## Step 4 — Verify Deployment
 
-1. Visit your live URL (e.g. `https://molylearn.vercel.app`)
+1. Visit your live URL (e.g. `https://TeamTrack.vercel.app`)
 2. You should see the login page
 3. Log in with demo credentials:
 
@@ -142,7 +142,7 @@ Or use any random string generator (min 32 characters).
 
 | Variable | Local Value | Production Value |
 |---|---|---|
-| `DATABASE_URL` | `postgresql://postgres:12345@localhost:5432/molylearn` | Supabase connection string |
+| `DATABASE_URL` | `postgresql://postgres:12345@localhost:5432/TeamTrack` | Supabase connection string |
 | `NEXTAUTH_SECRET` | any string | secure 32+ char random string |
 | `NEXTAUTH_URL` | `http://localhost:3000` | `https://your-app.vercel.app` |
 

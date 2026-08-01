@@ -80,27 +80,27 @@ export default async function DashboardPage() {
   const pendingTasks = totalTasks - completedTasks;
 
   // Charts data
-  // const priorityData = [
-  //   { name: "High", value: allTasks.filter(t => t.priority === "HIGH").length, color: priorityColors.HIGH },
-  //   { name: "Medium", value: allTasks.filter(t => t.priority === "MEDIUM").length, color: priorityColors.MEDIUM },
-  //   { name: "Low", value: allTasks.filter(t => t.priority === "LOW").length, color: priorityColors.LOW },
-  // ];
   const priorityData = [
-  { name: "High", value: allTasks.filter((t: { priority: string }) => t.priority === "HIGH").length, color: priorityColors.HIGH },
-  { name: "Medium", value: allTasks.filter((t: { priority: string }) => t.priority === "MEDIUM").length, color: priorityColors.MEDIUM },
-  { name: "Low", value: allTasks.filter((t: { priority: string }) => t.priority === "LOW").length, color: priorityColors.LOW }
-];
+    { name: "High", value: allTasks.filter(t => t.priority === "HIGH").length, color: priorityColors.HIGH },
+    { name: "Medium", value: allTasks.filter(t => t.priority === "MEDIUM").length, color: priorityColors.MEDIUM },
+    { name: "Low", value: allTasks.filter(t => t.priority === "LOW").length, color: priorityColors.LOW },
+  ];
+//   const priorityData = [
+//   { name: "High", value: allTasks.filter((t: { priority: string }) => t.priority === "HIGH").length, color: priorityColors.HIGH },
+//   { name: "Medium", value: allTasks.filter((t: { priority: string }) => t.priority === "MEDIUM").length, color: priorityColors.MEDIUM },
+//   { name: "Low", value: allTasks.filter((t: { priority: string }) => t.priority === "LOW").length, color: priorityColors.LOW }
+// ];
 
-  // const statusData = [
-  //   { name: "Todo", value: allTasks.filter(t => t.status === "TODO").length, color: statusColors.TODO },
-  //   { name: "In Progress", value: allTasks.filter(t => t.status === "IN_PROGRESS").length, color: statusColors.IN_PROGRESS },
-  //   { name: "Completed", value: allTasks.filter(t => t.status === "COMPLETED").length, color: statusColors.COMPLETED },
-  // ];
   const statusData = [
-  { name: "Todo", value: allTasks.filter((t: { status: string }) => t.status === "TODO").length, color: statusColors.TODO },
-  { name: "In Progress", value: allTasks.filter((t: { status: string }) => t.status === "IN_PROGRESS").length, color: statusColors.IN_PROGRESS },
-  { name: "Completed", value: allTasks.filter((t: { status: string }) => t.status === "COMPLETED").length, color: statusColors.COMPLETED }
-];
+    { name: "Todo", value: allTasks.filter(t => t.status === "TODO").length, color: statusColors.TODO },
+    { name: "In Progress", value: allTasks.filter(t => t.status === "IN_PROGRESS").length, color: statusColors.IN_PROGRESS },
+    { name: "Completed", value: allTasks.filter(t => t.status === "COMPLETED").length, color: statusColors.COMPLETED },
+  ];
+//   const statusData = [
+//   { name: "Todo", value: allTasks.filter((t: { status: string }) => t.status === "TODO").length, color: statusColors.TODO },
+//   { name: "In Progress", value: allTasks.filter((t: { status: string }) => t.status === "IN_PROGRESS").length, color: statusColors.IN_PROGRESS },
+//   { name: "Completed", value: allTasks.filter((t: { status: string }) => t.status === "COMPLETED").length, color: statusColors.COMPLETED }
+// ];
 
   const projectProgressData = projects.map(p => ({
     name: p.name,
@@ -108,6 +108,7 @@ export default async function DashboardPage() {
     pending: p.tasks.filter(t => t.status !== "COMPLETED").length,
     total: p._count.tasks,
   }));
+
 
   // Trend: last 14 days
   const trendData = Array.from({ length: 14 }, (_, i) => {
